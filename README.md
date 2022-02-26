@@ -1,2 +1,2 @@
 # algorithm-practice  
-### 알고리즘 문제풀이 코드 저장소
+### This is my repository for storing codes that solve algorithm problems.
