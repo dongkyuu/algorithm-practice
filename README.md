@@ -1,2 +1,2 @@
 # algorithm-practice  
-### This is my repository for storing codes that solve algorithm problems.
+### This repository is used to store my java(or python) source codes that solved algorithm problems.
