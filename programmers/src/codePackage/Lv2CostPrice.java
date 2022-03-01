@@ -8,7 +8,9 @@ public class Lv2CostPrice {
 	
 	// 스택 활용 풀이 체크
 	public static void main(String[] args) {
+		
 		int[] prices = {1,2,3,2,3};
+		
 		for(int i : solution3(prices)) {
 			System.out.println(i);
 		}
