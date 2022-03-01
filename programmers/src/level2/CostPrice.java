@@ -1,10 +1,10 @@
-package codePackage;
+package level2;
 
 import java.util.Stack;
 
 // 프로그래머스 알고리즘 문제
 // 코딩테스트 연습 > 스택/큐 > 주식가격
-public class Lv2CostPrice {
+public class CostPrice {
 	
 	// 스택 활용 풀이 체크
 	public static void main(String[] args) {
