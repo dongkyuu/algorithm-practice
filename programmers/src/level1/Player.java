@@ -2,6 +2,7 @@ package level1;
 
 import java.util.HashMap;
 
+// 완주하지 못한 선수
 public class Player {
 	
 	public static String solution(String[] participant, String[] completion) {
@@ -23,6 +24,7 @@ public class Player {
         
         return answer;
     }
+	
 	public static void main(String[] args) {
 		String[] p = {"leo", "kiki", "eden"};
 		String[] c = {"eden", "kiki"};

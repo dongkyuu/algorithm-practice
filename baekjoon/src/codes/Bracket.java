@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
+// °ýÈ£
 public class Bracket {
 
 	public static boolean isValid(String ps) {
