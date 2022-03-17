@@ -13,9 +13,11 @@ public class Hashing {
 		long r = 1;
 		
 		for(int i = 0; i < len; i++) {
-			hashValue += ( ((str.charAt(i) - 96) % m) * r ) % m;
+			hashValue += ( ((str.charAt(i) - 'a' + 1)) * r ) % m; // •û¤¤µµµÊ
 			r = r * 31 % m;
 		}
+		
+		// (n * Math.pow) % m
 		
 		hashValue = hashValue % m;
 		
