@@ -32,37 +32,54 @@ public class DoublePriorityQueue {
 	public static PriorityQueue<Integer> deleteMin(PriorityQueue<Integer> q) {
 		if(q.size() == 0) {
 			return q;
+		} else {
+			PriorityQueue<Integer> que = new PriorityQueue<>();
+			for(int x : q) {
+				que.offer(x);
+			}
+			que.poll();
+			return que;			
 		}
 		
-		PriorityQueue<Integer> que = new PriorityQueue<>();
-		
-		for(int x : q) {
-			que.offer(x);
-		}
-		
-		que.poll();
-		
-		return que;
 	}
 	
 	public static PriorityQueue<Integer> deleteMax(PriorityQueue<Integer> q) {
 		if(q.size() == 0) {
 			return q;
-		}
+		} else {
+			PriorityQueue<Integer> que = new PriorityQueue<>(Collections.reverseOrder());	
+			for(int x : q) {
+				que.offer(x);
+			}
+			que.poll();	
+			return que;
+		}		
+	}
+	
+	public static int[] returnAnswer(PriorityQueue<Integer> q) {
+		int[] answer = new int[2];
 		
-		PriorityQueue<Integer> que = new PriorityQueue<>(Collections.reverseOrder());
+		if(q.size() == 0) {
+	        answer[0] = 0;
+	        answer[1] = 0;
+	    } else {
+	    	PriorityQueue<Integer> que = new PriorityQueue<>();
+	    	for(int x : q) {
+	    		que.offer(x);
+	    	}
+	    	
+	    	int[] tmp = new int[que.size()];
+	        for(int i = 0; i < tmp.length; i++) {
+	        	tmp[i] = que.poll();
+	        }
+	        answer[0] = tmp[tmp.length - 1];
+	        answer[1] = tmp[0];
+	    }
 		
-		for(int x : q) {
-			que.offer(x);
-		}
-		
-		que.poll();
-		
-		return que;
+		return answer;
 	}
 	
 	public static int[] solution(String[] operations) {
-        int[] answer = new int[2];
         PriorityQueue<Integer> que = new PriorityQueue<>();
         String[] arr = new String[2];
 
@@ -81,25 +98,11 @@ public class DoublePriorityQueue {
         	}
         }
         
-        if(que.size() == 0) {
-        	answer[0] = 0;
-        	answer[1] = 0;
-        } else {
-        	int[] tmp = new int[que.size()];
-        	
-        	for(int i = 0; i < tmp.length; i++) {
-        		tmp[i] = que.poll();
-        	}
-        	
-        	answer[0] = tmp[tmp.length - 1];
-        	answer[1] = tmp[0];
-        }
-        
-        return answer;
+        return returnAnswer(que);
     }
 	
 	public static void main(String[] args) {
-		String[] operations = {"I 16","D 1"};
+		String[] operations = {"I 7","I 5","I -5","D -1"};
 	
 		for(int x : solution(operations)) {
 			System.out.println(x);
