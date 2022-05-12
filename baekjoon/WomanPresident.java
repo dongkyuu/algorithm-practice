@@ -50,6 +50,8 @@ public class WomanPresident {
             System.out.println(doubleLoop(k, n));
             // System.out.println(rec(k, n));
         }
+
+        br.close();
     }
     
 }

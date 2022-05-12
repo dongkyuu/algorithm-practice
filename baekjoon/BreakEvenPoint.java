@@ -32,6 +32,8 @@ public class BreakEvenPoint {
         int c = Integer.parseInt(st.nextToken());
 
         System.out.println(solution(a, b, c));
+
+        br.close();
     }
     
 }

@@ -1,3 +1,4 @@
+package baekjoon.basicMath1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -37,5 +38,7 @@ public class FindingFraction {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String n = br.readLine();
         System.out.println(solution(n));
+
+        br.close();
     }
 }
