@@ -4,39 +4,36 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class sortingNumber1 {
+public class sortingNumber3 {
     
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
         int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n];
+
+        int[] arr = new int[10001];
 
         for(int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(br.readLine());
+            arr[Integer.parseInt(br.readLine())] += 1;
         }
+        
+        br.close();
 
-        // 선택 정렬
-        for(int i = 0; i < n-1; i++) {
-            for(int j = i+1; j < n; j++) {
-                int tmp = 0;
-                if(arr[i] > arr[j]) {
-                    tmp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = tmp;
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] == 0) {
+                continue;
+            } else if(arr[i] == 1) {
+                sb.append(i).append('\n');
+            } else {
+                for(int j = 0; j < arr[i]; j++) {
+                    sb.append(i).append('\n');
                 }
             }
         }
 
-        for(int i : arr) {
-            sb.append(i).append('\n');
-        }
-        
         System.out.println(sb);
-
-        br.close();
 
     }
 

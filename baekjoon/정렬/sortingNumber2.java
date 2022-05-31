@@ -13,17 +13,16 @@ public class sortingNumber2 {
         StringBuilder sb = new StringBuilder();
 
         int n = Integer.parseInt(br.readLine());
+        int[] arr = new int[n];
 
-        boolean[] arr = new boolean[2000001];
-
-        for(int i = 0; i < n; i++) {
-            arr[Integer.parseInt(br.readLine()) + 1000000] = true;
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
         }
 
-        for(int i = 0; i < 2000001; i++) {
-            if(arr[i]) {
-                sb.append(i - 1000000).append('\n');
-            }
+        Arrays.sort(arr);
+
+        for(int i : arr) {
+            sb.append(i).append('\n');
         }
 
         System.out.println(sb);
