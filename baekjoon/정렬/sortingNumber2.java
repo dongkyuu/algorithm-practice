@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class sortingNumber2 {
+public class SortingNumber2 {
     
     public static void main(String[] args) throws NumberFormatException, IOException {
 
