@@ -16,6 +16,7 @@ public class NumberCard {
         StringTokenizer stCard = new StringTokenizer(br.readLine());
         boolean[] cardNum = new boolean[20000001];
         
+        // 카드의 숫자 중복 X
         for(int i = 0; i < n; i++) {
             cardNum[Integer.parseInt(stCard.nextToken()) + 10000000] = true;
         }
